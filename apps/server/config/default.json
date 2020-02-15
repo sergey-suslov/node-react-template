@@ -1,0 +1,17 @@
+{
+  "port": 8080,
+  "app": {
+    "name": "gateway"
+  },
+  "db": {
+    "port": 5432,
+    "username": "trechit",
+    "password": "password",
+    "database": "trechit-node"
+  },
+  "crypto": {
+    "hash": {
+      "length": 128
+    }
+  }
+}
