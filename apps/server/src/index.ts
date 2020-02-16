@@ -4,12 +4,13 @@ dotconfig({ path: '.env' })
 import { createConnection } from 'typeorm'
 import express from 'express'
 import config from 'config'
+import ormconfig from './ormconfig'
 import expressPinoLogger from 'express-pino-logger'
 import { loggerExpress, injectLogger } from './utils/logger'
 import { errorHandler } from './middlewares/errors'
 import routes from './routes'
 
-createConnection()
+createConnection(ormconfig)
   .then(() => {
     const app = express()
 

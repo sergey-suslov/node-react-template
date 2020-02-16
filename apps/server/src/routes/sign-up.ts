@@ -9,7 +9,7 @@ interface UserSignUpForm<TEmail = string, TPassword = string> {
 
 type UserSignUpFormJoi = UserSignUpForm<joi.StringSchema, joi.StringSchema>
 
-export const signUpValidate = (req: Request, res: Response, next: NextFunction ) => {
+export const signUpValidate = (req: Request, res: Response, next: NextFunction) => {
   const signUp = req.body as UserSignUpForm
   const joiSignUp: UserSignUpFormJoi = {
     email: joi.string().email(),

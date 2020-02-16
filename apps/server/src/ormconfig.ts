@@ -1,7 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const config = require('config')
+import config from 'config'
+import { ConnectionOptions } from 'typeorm'
 
-module.exports = {
+const options: ConnectionOptions = {
   type: 'postgres',
   host: 'localhost',
   port: config.get('db.port'),
@@ -14,3 +15,5 @@ module.exports = {
   migrations: ['src/migration/**/*.ts'],
   subscribers: ['src/subscriber/**/*.ts'],
 }
+
+export default options

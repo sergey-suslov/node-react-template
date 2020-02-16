@@ -5,9 +5,9 @@
   },
   "db": {
     "port": 5432,
-    "username": "trechit",
+    "username": "username",
     "password": "password",
-    "database": "trechit-node"
+    "database": "database-node"
   },
   "crypto": {
     "hash": {
