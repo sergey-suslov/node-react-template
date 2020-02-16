@@ -18,7 +18,8 @@
     "pino": "^5.16.0",
     "reflect-metadata": "^0.1.13",
     "typescript": "^3.7.4",
-    "typeorm": "~0.2.22"
+    "typeorm": "~0.2.22",
+    "body-parser": "~1.19.0"
   },
   "devDependencies": {
     "@types/boom": "^7.3.0",

@@ -4,6 +4,7 @@ dotconfig({ path: '.env' })
 import { createConnection } from 'typeorm'
 import express from 'express'
 import config from 'config'
+import bodyParser from 'body-parser'
 import ormconfig from './ormconfig'
 import expressPinoLogger from 'express-pino-logger'
 import { loggerExpress, injectLogger } from './utils/logger'
@@ -14,6 +15,7 @@ createConnection(ormconfig)
   .then(() => {
     const app = express()
 
+    app.use(bodyParser.json())
     app.use(expressPinoLogger({ logger: loggerExpress }))
     app.use(injectLogger)
     app.use(routes)

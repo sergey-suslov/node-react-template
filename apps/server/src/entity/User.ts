@@ -2,7 +2,7 @@ import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateCol
 import { generateHash } from '../utils/crypto'
 
 @Entity()
-export class User {
+export default class User {
   @PrimaryGeneratedColumn()
   id: number
 
