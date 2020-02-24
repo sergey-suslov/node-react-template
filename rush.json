@@ -368,6 +368,11 @@
       "projectFolder": "apps/server",
       "reviewCategory": "production"
     },
+    {
+      "packageName": "@node-react-template/client",
+      "projectFolder": "apps/client",
+      "reviewCategory": "production"
+    },
     // 
     // {
     //   "packageName": "my-toolchain",
